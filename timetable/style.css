@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#timetable {
+  display: flex;           
+  gap: 10px;
+  overflow-x: auto;        
+  padding-bottom: 10px;
+}
+
+/* Horizontal day boxes */
+.day {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 220px;      
+  height: auto;            
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.day:hover {
+  transform: scale(1.03);
+}
+
+.day h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.class {
+  padding: 6px;
+  border-radius: 6px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.controls {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.controls button {
+  padding: 6px 12px;     
+  font-size: 12px;       
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.controls button:hover {
+  transform: scale(1.05);
+}
+
+button.edit {
+  background: #2563eb;
+}
+button.edit:hover {
+  background: #1d4ed8;
+}
+
+button.delete {
+  background: #dc2626;
+}
+button.delete:hover {
+  background: #b91c1c;
+}
+
+button.attend {
+  background: #16a34a;
+}
+button.attend:hover {
+  background: #15803d;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+form input, form select {
+  flex: 1;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 13px;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  background: #4f46e5;
+  padding: 6px 12px;    
+  font-size: 12px;
+}
+button[type="submit"]:hover {
+  background: #4338ca;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4f46e5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+  animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}

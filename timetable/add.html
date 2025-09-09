@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add / Edit Class</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="formTitle">Add Class</h1>
+  <form id="classForm">
+    <label>Title:
+      <input type="text" id="title" required>
+    </label>
+
+    <label>Day:
+      <select id="day">
+        <option value="0">Monday</option>
+        <option value="1">Tuesday</option>
+        <option value="2">Wednesday</option>
+        <option value="3">Thursday</option>
+        <option value="4">Friday</option>
+        <option value="5">Saturday</option>
+      </select>
+    </label>
+
+    <label>Start Time:
+      <input type="number" id="startHour" min="1" max="12" required>
+      :
+      <input type="number" id="startMin" min="0" max="59" required>
+      <select id="startAmPm">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+    </label>
+
+    <label>End Time:
+      <input type="number" id="endHour" min="1" max="12" required>
+      :
+      <input type="number" id="endMin" min="0" max="59" required>
+      <select id="endAmPm">
+        <option value="AM">AM</option>
+        <option value="PM">PM</option>
+      </select>
+    </label>
+
+    <label>Reminder (minutes before):
+      <input type="number" id="reminder" value="10">
+    </label>
+
+    <button type="submit">Save</button>
+  </form>
+
+  <script src="add.js"></script>
+</body>
+</html>
